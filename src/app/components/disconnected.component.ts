@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-page-disconnected',
+  selector: 'app-disconnected',
   template: `
     <div class="disconnected-box">
       <mat-icon>usb_off</mat-icon>
@@ -31,4 +31,4 @@ import { Component } from '@angular/core';
     }
   `]
 })
-export class PageDisconnectedComponent { }
+export class DisconnectedComponent { }

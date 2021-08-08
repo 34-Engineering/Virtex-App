@@ -4,10 +4,20 @@ import {Component} from '@angular/core';
   selector: 'app-root',
   template: `
     <app-header></app-header>
-    <router-outlet></router-outlet>
+    
+    <!-- <app-disconnected></app-disconnected> -->
+    
+    <div class="mid">
+      <app-video></app-video>
+      <app-parameters></app-parameters>
+    </div>
+    <app-bottom-bar></app-bottom-bar>
   `,
   styles: [`
-    
+    .mid {
+      height: calc(100% - 56px);
+      width: 100%;
+    }
     
   `]
 })

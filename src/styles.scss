@@ -34,13 +34,6 @@ app-root, body, html {
   color: mat-color($accent-34E, default-contrast);
 }
 
-//Header
-mat-toolbar {
-  @include mat-elevation(4);
-  position: relative;
-  z-index: 10;
-}
-
 //Scrollbar
 ::-webkit-scrollbar {
   background-color: #202324;

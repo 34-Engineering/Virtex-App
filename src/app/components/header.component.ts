@@ -1,10 +1,39 @@
 import {Component} from '@angular/core';
 import { remote, BrowserWindow } from 'electron';
-import { version } from '../../../../package.json';
+import { version } from '../../../package.json';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html',
+  template: `
+    <div class="header">
+      <div class="resize-handle top"></div>
+      <div class="resize-handle left"></div>
+
+      <object class="logo" data="./assets/icons/34E.svg" type="image/svg+xml"></object>
+
+      <div class="title">
+        Virtex App
+      </div>
+
+      <div class="window-controls">
+        <button aria-label="minimize" title="Minimize" tabindex="-1" class="window-control minimize" (click)="win.minimize()">
+          <svg aria-hidden="true" version="1.1" width="10" height="10">
+            <path d="M 0,5 10,5 10,6 0,6 Z"></path>
+          </svg>
+        </button>
+        <button aria-label="maximize" title="Maximize" tabindex="-1" class="window-control maximize" (click)="win.maximize()">
+          <svg aria-hidden="true" version="1.1" width="10" height="10">
+            <path d="M 0,0 0,10 10,10 10,0 Z M 1,1 9,1 9,9 1,9 Z"></path>
+          </svg>
+        </button>
+        <button aria-label="close" title="Close" tabindex="-1" class="window-control close" (click)="win.close()">
+          <svg aria-hidden="true" version="1.1" width="10" height="10">
+            <path d="M 0,0 0,0.7 4.3,5 0,9.3 0,10 0.7,10 5,5.7 9.3,10 10,10 10,9.3 5.7,5 10,0.7 10,0 9.3,0 5,4.3 0.7,0 Z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  `,
   styles: [`
     .header {
       height: 28px;
@@ -66,7 +95,7 @@ import { version } from '../../../../package.json';
       border: none;
       box-shadow: none;
       border-radius: 0;
-      color: #ffffff;
+      color: #cccccc;
       background-color: transparent;
       transition: background-color .25s ease;
       line-height: 10px;

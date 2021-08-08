@@ -1,8 +1,8 @@
 {
-  "name": "breaker-board",
-  "description": "A desktop dashboard for FRC",
-  "homepage": "https://github.com/BreakerBots/BreakerBoard",
-  "version": "4.0.0-beta3",
+  "name": "virtex-app",
+  "description": "A desktop app for streaming video and data from the 34E Virtex Camera.",
+  "homepage": "https://34engineering.com/virtex",
+  "version": "0.1.0",
   "author": {
     "name": "Liam Snow",
     "email": "liamsnow03@gmail.com"
@@ -23,7 +23,7 @@
     "electron:build": "npm run build:prod && electron-builder build"
   },
   "build": {
-    "productName": "BreakerBoard",
+    "productName": "virtex-app",
     "directories": {
       "output": "release/"
     },
@@ -45,8 +45,8 @@
       "deleteAppDataOnUninstall": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "BreakerBoard",
-      "artifactName": "BreakerBoard.${version}.${ext}"
+      "shortcutName": "virtex-app",
+      "artifactName": "virtex-app.${version}.${ext}"
     }
   },
   "devDependencies": {

@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "BreakerBoard": {
+    "virtex-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -28,10 +28,7 @@
             "scripts": [],
             "customWebpackConfig": {
               "path": "src/config/angular.webpack.js"
-            },
-            "allowedCommonJsDependencies": [
-              "src/assets/out/js/desmos.js"
-            ]
+            }
           },
           "configurations": {
             "dev": {
@@ -87,30 +84,30 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "BreakerBoard:build"
+            "browserTarget": "virtex-app:build"
           },
           "configurations": {
             "dev": {
-              "browserTarget": "BreakerBoard:build:dev"
+              "browserTarget": "virtex-app:build:dev"
             },
             "web": {
-              "browserTarget": "BreakerBoard:build:web"
+              "browserTarget": "virtex-app:build:web"
             },
             "production": {
-              "browserTarget": "BreakerBoard:build:production"
+              "browserTarget": "virtex-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "BreakerBoard:build"
+            "browserTarget": "virtex-app:build"
           }
         }
       }
     }
   },
-  "defaultProject": "BreakerBoard",
+  "defaultProject": "virtex-app",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
