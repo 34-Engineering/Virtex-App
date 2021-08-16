@@ -88,5 +88,8 @@
   },
   "browserslist": [
     "last 1 Chrome version"
-  ]
+  ],
+  "dependencies": {
+    "serialport": "^9.2.0"
+  }
 }

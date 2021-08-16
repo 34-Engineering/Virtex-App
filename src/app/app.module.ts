@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { SafeHtmlPipe } from './components/safe-html-pipe';
 import { HeaderComponent } from './components/header.component';
-import { BottomBarComponent } from './components/bottom-bar.component';
 import { DisconnectedComponent } from './components/disconnected.component';
 import { ParametersComponent } from './components/parameters.component';
+import { SideBarComponent } from './components/side-bar.component';
 import { VideoComponent } from './components/video.component';
 
 import {MatButtonModule} from '@angular/material/button';
@@ -23,13 +24,14 @@ import {MatIconModule} from '@angular/material/icon';
     AppComponent,
     HeaderComponent,
     SafeHtmlPipe,
-    BottomBarComponent,
     DisconnectedComponent,
     ParametersComponent,
+    SideBarComponent,
     VideoComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MatButtonModule,
     MatProgressBarModule,
     MatCheckboxModule,

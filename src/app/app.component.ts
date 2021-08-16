@@ -5,20 +5,26 @@ import {Component} from '@angular/core';
   template: `
     <app-header></app-header>
     
-    <!-- <app-disconnected></app-disconnected> -->
-    
     <div class="mid">
+      <app-side-bar></app-side-bar>
       <app-video></app-video>
-      <app-parameters></app-parameters>
     </div>
-    <app-bottom-bar></app-bottom-bar>
   `,
   styles: [`
     .mid {
-      height: calc(100% - 56px);
+      height: 100%;
       width: 100%;
+      display: flex;
+      justify-content: space-between;
     }
     
+    app-video {
+      width: calc(100% - 225px);
+    }
+
+    app-side-bar {
+      width: 225px;
+    }
   `]
 })
 export class AppComponent {

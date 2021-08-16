@@ -37,7 +37,7 @@ import { version } from '../../../package.json';
   styles: [`
     .header {
       height: 28px;
-      background: #444444;
+      background: #444;
       -webkit-app-region: drag;
       flex-grow: 0;
       flex-shrink: 0;
@@ -58,6 +58,7 @@ import { version } from '../../../package.json';
       font-size: 14px;
       margin-left: 5px;
       margin-top: 4px;
+      white-space: nowrap;
     }
 
     .resize-handle {
