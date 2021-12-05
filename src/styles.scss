@@ -22,7 +22,7 @@ $theme-34: mat.define-dark-theme(
 @include mat.all-component-themes($theme-34);
 
 //Fonts (Roboto, Roboto-Mono, Material-Icons)
-@import "../assets/fonts/all.css";
+@import "../assets/fonts/all.scss";
 
 //Screen Stuff
 html,
