@@ -1,0 +1,16 @@
+/dist
+/release
+/electron/app.js
+*.js.map
+/node_modules
+/.angular
+
+# IDEs and editors
+.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vscode/*

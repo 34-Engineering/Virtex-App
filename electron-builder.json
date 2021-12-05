@@ -1,0 +1,31 @@
+{
+  "asar": false,
+  "directories": {
+    "output": "release/"
+  },
+  "files": [
+    "**/*",
+    "!**/*.ts",
+    "!*.map",
+    "!package.json",
+    "!package-lock.json"
+  ],
+  "win": {
+    "icon": "assets/icons",
+    "target": [
+      "portable"
+    ]
+  },
+  "mac": {
+    "icon": "assets/icons",
+    "target": [
+      "dmg"
+    ]
+  },
+  "linux": {
+    "icon": "assets/icons",
+    "target": [
+      "AppImage"
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "virtex-app",
+  "version": "0.1.0",
+  "author": "34 Engineering, LLC",
+  "license": "GPL-3.0",
+  "main": "electron/app.js",
+  "scripts": {
+    "serve": "npm-run-all -p electron:serve ng:serve",
+    "build": "npm run electron:tsc && npm run ng:build && electron-builder build --publish=never",
+    "buildlocal": "npm run electron:tsc && npm run ng:build && electron .",
+    "ng:build": "ng build --base-href ./ --configuration production",
+    "ng:serve": "ng serve",
+    "electron:tsc": "tsc -p tsconfig.serve.json",
+    "electron:serve": "wait-on tcp:4200 && npm run electron:tsc && electron . --serve",
+    "postinstall": "electron-builder install-app-deps",
+    "lint": "gts lint **/*.ts",
+    "fix": "gts fix **/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/34-Engineering/Virtex-App.git"
+  },
+  "private": true,
+  "browserslist": [
+    "chrome 91"
+  ],
+  "dependencies": {
+    "@angular/cdk": "^13.0.3",
+    "@angular/common": "~13.0.3",
+    "@angular/compiler": "~13.0.3",
+    "@angular/core": "~13.0.3",
+    "@angular/forms": "~13.0.3",
+    "@angular/material": "^13.0.3",
+    "@angular/platform-browser": "~13.0.3",
+    "@angular/platform-browser-dynamic": "~13.0.3",
+    "@angular/router": "~13.0.3",
+    "electron-window-state": "^5.0.3",
+    "gts": "^3.1.0",
+    "rxjs": "~7.4.0",
+    "timers": "^0.1.1",
+    "tslib": "^2.3.1",
+    "tslint": "^6.1.3",
+    "url": "^0.11.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-builders/custom-webpack": "13.0.0",
+    "@angular-devkit/build-angular": "13.0.4",
+    "@angular/cli": "13.0.4",
+    "@angular/compiler-cli": "13.0.3",
+    "@types/electron-window-state": "^5.0.0",
+    "@types/node": "^16.11.7",
+    "electron": "16.0.4",
+    "electron-builder": "22.14.5",
+    "electron-reload": "1.5.0",
+    "gts": "^3.1.0",
+    "node-polyfill-webpack-plugin": "1.1.4",
+    "npm-run-all": "4.1.5",
+    "ts-node": "10.4.0",
+    "typescript": "~4.4.4",
+    "wait-on": "6.0.0",
+    "webdriver-manager": "12.1.8"
+  }
+}

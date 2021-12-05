@@ -1,0 +1,55 @@
+//Material
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$background-dark-34: #212121;
+$primary-34: mat.define-palette(mat.$blue-palette, 900);
+$accent-34: mat.define-palette(mat.$grey-palette, 900);
+// $warn-34: mat.define-palette(mat.$red-palette);
+$warn-34: mat.define-palette(mat.$amber-palette, 900);
+//dark theme background is #303030
+$theme-34: mat.define-dark-theme(
+  (
+    color: (
+      primary: $primary-34,
+      accent: $accent-34,
+      warn: $warn-34,
+    )
+  )
+);
+
+@include mat.all-component-themes($theme-34);
+
+//Fonts (Roboto, Roboto-Mono, Material-Icons)
+@import "../assets/fonts/all.css";
+
+//Screen Stuff
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  min-height: 100%;
+  height: auto;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  position: relative;
+}
+
+@media (prefers-color-scheme: dark) {
+  .mat-app-background {
+    background: $background-dark-34;
+  }
+}
+
+//Input
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,9 @@
+build/
+dist/
+node_modules/
+keys/
+data/
+assets/
+.vscode/
+.angular/
+src/app/generated/
