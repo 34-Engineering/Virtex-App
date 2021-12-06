@@ -4,11 +4,14 @@ import { Component } from '@angular/core';
   selector: 'root-34',
   template: `
     <header-34></header-34>
-    <h1>Virtex App</h1>
-    <button mat-raised-button color="primary">TEST</button>
+    <div class="content">
+      <video-34></video-34>
+    </div>
   `,
   styles: [`
-    
+    .content {
+      padding: 20px;
+    }
   `]
 })
 export class AppComponent {
